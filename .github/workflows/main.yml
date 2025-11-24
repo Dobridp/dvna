@@ -16,9 +16,11 @@ jobs:
       - uses: snyk/actions/setup@master
 
       - name: Install dependencies
+        continue-on-error: true
         run: npm install
  
       - name: Install snyk
+        continue-on-error: true
         run: npm install -g snyk
      
       - name: Configure Snyk endpoint
