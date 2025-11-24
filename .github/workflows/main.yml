@@ -18,6 +18,9 @@ jobs:
         with:
           node-version: '20'
 
+      - name: Install dependencies (ignore native build)
+        run: npm install --ignore-scripts
+
       - uses: snyk/actions/setup@master
 
       - name: Configure Snyk endpoint
